@@ -49,7 +49,7 @@ function updateCarousel() {
 // Função para avançar automaticamente os slides a cada 5 segundos
 function autoAdvance() {
     changeSlide(1);
-    setTimeout(autoAdvance, 5000); // Mude a cada 5 segundos (5000 milissegundos)
+    setTimeout(autoAdvance, 4000); // Mude a cada 4 segundos (5000 milissegundos)
 }
 
 autoAdvance(); // Iniciar a auto-avanço
