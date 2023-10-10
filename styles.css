@@ -405,13 +405,12 @@ button:hover strong:after {
 
 .footer-content {
     display: flex; /* Exibe os elementos em uma linha */
-    justify-content: center; /* Centraliza os elementos horizontalmente */
+    justify-content: space-between; /* Espaçamento entre os elementos */
     align-items: center; /* Centraliza os elementos verticalmente */
 }
 
 .footer-section {
     flex: 1; /* Distribui o espaço igualmente entre os elementos */
-    margin: 0 20px; /* Espaçamento horizontal entre os elementos */
     position: relative; /* Permite adicionar ícones relativos */
 }
 
@@ -425,7 +424,6 @@ button:hover strong:after {
 }
 
 .footer-section::before {
-    content: "\f023"; /* Código Unicode para o ícone (por exemplo, um ícone de envelope) */
     font-family: FontAwesome; /* Fonte de ícones (por exemplo, Font Awesome) */
     font-size: 24px; /* Tamanho do ícone */
     position: absolute; /* Posiciona o ícone absolutamente */
@@ -435,28 +433,78 @@ button:hover strong:after {
     color: #fff; /* Cor do ícone */
 }
 
-/* Exemplo de estilo de ícone */
-.footer-section.contact::before {
-    content: "\f0e0"; /* Código Unicode para um ícone de envelope (exemplo) */
+.navigation {
+    text-align: left; /* Alinha o texto da navegação à esquerda */
 }
 
-.footer-section.location::before {
-    content: "\f041"; /* Código Unicode para um ícone de localização (exemplo) */
+.contact {
+    text-align: center; /* Centraliza o texto de contato */
 }
 
-.footer-section.phone::before {
-    content: "\f095"; /* Código Unicode para um ícone de telefone (exemplo) */
+.footer-section-navigation {
+    display: flex;
+    flex-direction: column; /* Define a direção como vertical */
 }
+
+.footer-section-navigation a {
+    color: #ffffffcc; /* Cor do texto */
+    font-size: 1rem;
+    padding: 10px 20px;
+    font-weight: 500;
+    text-align: left; /* Alinha o texto à esquerda dentro do elemento "a" */
+    transition: 0.1s; /* Adiciona uma transição suave */
+}
+.footer-section-navigation a:hover {
+    color: var(--main-color);
+    transition: .1s;
+}
+
+
+
+.redes {
+    text-align: right; /* Alinha o texto das redes à direita */
+}
+
 
 /* Adicione mais estilos de ícone conforme necessário */
 
-
-
-
 .redes a {
-    margin: 10px 10px 10px 0px; /* Reduzi o espaçamento horizontal entre os ícones */
-    display: inline-block; /* Adicione esta linha para que fiquem um ao lado do outro */
+    margin: 10px 10px 10px 0px; /* Reduz o espaçamento horizontal entre os ícones */
+    display: inline-block; /* Exibe os ícones um ao lado do outro */
 }
+
+
+/* Novos elementos no footer */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.contact-info a {
+    color: #ffffffcc;
+    text-decoration: none;
+}
+
+/* Adicione mais estilos conforme necessário */
+
+
+.ethics {
+    text-align: center; /* Centraliza o conteúdo horizontalmente */
+    padding-bottom: 30px; /* Adiciona espaço abaixo do texto */
+    margin-bottom: 30px; /* Adiciona uma margem inferior para distância do footer */
+}
+
+.ethics button {
+    margin-top: 20px; /* Espaço entre o texto e o botão */
+}
+
+
 
 
 @media (max-width: 1430px){
