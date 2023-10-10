@@ -207,6 +207,71 @@ button:hover strong:after {
     line-weight: 1.8rem;
     
 }
+/* Adicione o seguinte CSS para estilizar o carrossel */
+/* Adicione o seguinte CSS para estilizar o carrossel e adicionar uma transição suave */
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    transition: transform 0.5s ease; /* Transição suave */
+}
+
+/* Aumente o tamanho das fotos no carrossel */
+.carousel-slide {
+    height: auto;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    max-height: 1600px; /* Ajuste a altura máxima conforme necessário */
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    display: block;
+}
+
+/* Adicione estilos para ocultar as outras fotos */
+.carousel-slide:not(.active) {
+    display: none;
+}
+
+
+
+
+.carousel img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease; /* Transição suave */
+}
+
+.carousel-controls {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Adicione estilos para as setas de navegação */
+.carousel-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #FF0000;
+    transition: color 0.3s ease; /* Efeito de cor suave */
+}
+
+.carousel-btn:focus {
+    outline: none;
+}
+
+.carousel-btn:hover {
+    color: #FF5555; /* Cor diferente ao passar o mouse */
+}
+
+
+/* Restante dos estilos permanecem os mesmos */
+
+
+
+
 
 .center{
     text-align: center;
@@ -331,19 +396,68 @@ button:hover strong:after {
     box-shadow: 0px 15px 30px 0px rgb(0 0 0 / 70%);
 }
 
-.redes {
-    text-align: center;
-    padding: 30px;
-    background: #0b0b13;
-    margin-top: 3rem;
-    line-height: 1.8rem;
-    justify-content: center;
+/* Estilização do Footer */
+.footer {
+    background: #0b0b13; /* Cor de fundo do footer */
+    padding: 30px; /* Espaçamento interno do footer */
+    text-align: center; /* Centraliza o conteúdo */
 }
 
-.redes a {
-    margin: 10px 50px 10px 0px;
-    
+.footer-content {
+    display: flex; /* Exibe os elementos em uma linha */
+    justify-content: center; /* Centraliza os elementos horizontalmente */
+    align-items: center; /* Centraliza os elementos verticalmente */
 }
+
+.footer-section {
+    flex: 1; /* Distribui o espaço igualmente entre os elementos */
+    margin: 0 20px; /* Espaçamento horizontal entre os elementos */
+    position: relative; /* Permite adicionar ícones relativos */
+}
+
+.footer-section h2 {
+    margin-bottom: 10px; /* Espaço abaixo do título */
+    color: #fff; /* Cor do texto */
+}
+
+.footer-section p {
+    color: #ffffffcc; /* Cor do texto */
+}
+
+.footer-section::before {
+    content: "\f023"; /* Código Unicode para o ícone (por exemplo, um ícone de envelope) */
+    font-family: FontAwesome; /* Fonte de ícones (por exemplo, Font Awesome) */
+    font-size: 24px; /* Tamanho do ícone */
+    position: absolute; /* Posiciona o ícone absolutamente */
+    left: -30px; /* Espaço à esquerda do ícone */
+    top: 50%; /* Centraliza verticalmente o ícone */
+    transform: translateY(-50%); /* Ajusta a posição vertical do ícone */
+    color: #fff; /* Cor do ícone */
+}
+
+/* Exemplo de estilo de ícone */
+.footer-section.contact::before {
+    content: "\f0e0"; /* Código Unicode para um ícone de envelope (exemplo) */
+}
+
+.footer-section.location::before {
+    content: "\f041"; /* Código Unicode para um ícone de localização (exemplo) */
+}
+
+.footer-section.phone::before {
+    content: "\f095"; /* Código Unicode para um ícone de telefone (exemplo) */
+}
+
+/* Adicione mais estilos de ícone conforme necessário */
+
+
+
+
+.redes a {
+    margin: 10px 10px 10px 0px; /* Reduzi o espaçamento horizontal entre os ícones */
+    display: inline-block; /* Adicione esta linha para que fiquem um ao lado do outro */
+}
+
 
 @media (max-width: 1430px){
     header {
