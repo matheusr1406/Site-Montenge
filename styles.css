@@ -10,10 +10,14 @@
 }
 
 :root {
-    --bg-color: #000; /* Cor de fundo preta */
-    --main-color: #FF0000; /* Vermelho principal */
-    --2nd-main-color: #FFFFFF; /* Branco */
-    --text-color: #FFFFFF; /* Cor do texto branca */
+    --bg-color: #000;
+    /* Cor de fundo preta */
+    --main-color: #FF0000;
+    /* Vermelho principal */
+    --2nd-main-color: #FFFFFF;
+    /* Branco */
+    --text-color: #FFFFFF;
+    /* Cor do texto branca */
     --big-font: 5rem;
     --h2-font: 1.9rem;
     --p-font: 1rem;
@@ -21,7 +25,7 @@
 
 body {
     background: var(--bg-color);
-    color:  var(--text-color);
+    color: var(--text-color);
 }
 
 header {
@@ -38,17 +42,16 @@ header {
     transition: .3s;
 }
 
-.logo {
-    color: var(--text-color);
-    font-size: 1.8rem;
-    font-weight: 600;
+.logo img {
+    max-width: 190px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
 }
 
 span {
     color: #FF0000;
 }
 
-.navbar  {
+.navbar {
     display: flex;
 }
 
@@ -58,6 +61,7 @@ span {
     padding: 10px 20px;
     font-weight: 500;
 }
+
 .navbar a:hover {
     background: var(--main-color);
     transition: .1s;
@@ -87,7 +91,7 @@ section {
     align-items: center;
 }
 
-.home-img img{  
+.home-img img {
     max-wdith: 100%;
     width: 400px;
     height: auto;
@@ -95,8 +99,8 @@ section {
     transition: .3s;
 }
 
-.home-img img:hover{
-   transform: scale(1.1);
+.home-img img:hover {
+    transform: scale(1.1);
 }
 
 .home-text h5 {
@@ -116,7 +120,7 @@ section {
 .home-text h6 {
     color: #fff;
     font-size: 30px;
-    font-weight:500;
+    font-weight: 500;
     margin-bottom: 25px;
 }
 
@@ -133,19 +137,19 @@ button {
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;
-   }
+}
 
 button a {
     color: #fff;
 }
-   
+
 button strong {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
-   }
-   
+}
+
 button strong:after {
     content: '»';
     position: absolute;
@@ -153,23 +157,23 @@ button strong:after {
     top: 0;
     right: -15px;
     transition: 0.5s;
-   }
-   
+}
+
 button:hover strong {
     padding-right: 15px;
-   }
-   
+}
+
 button:hover strong:after {
     opacity: 1;
     right: 0;
-   }
+}
 
 .about {
     display: grid;
     grid-template-columns: 2fr 2fr;
     grid-gap: 5rem;
     align-items: center;
-}   
+}
 
 .about-img img {
     max-width: 100%;
@@ -183,7 +187,7 @@ button:hover strong:after {
     font-weight: 300;
     letter-spacing: 6px;
     margin: 0 0 30px;
-   
+
 
 }
 
@@ -194,7 +198,7 @@ button:hover strong:after {
     max-width: 470px;
     line-height: 1.2;
     margin-bottom: 2rem;
-    
+
 }
 
 
@@ -205,15 +209,17 @@ button:hover strong:after {
     font-weight: 300;
     margin-bottom: 1.5rem;
     line-weight: 1.8rem;
-    
+
 }
+
 /* Adicione o seguinte CSS para estilizar o carrossel */
 /* Adicione o seguinte CSS para estilizar o carrossel e adicionar uma transição suave */
 .carousel {
     display: flex;
     overflow: hidden;
     width: 100%;
-    transition: transform 0.5s ease; /* Transição suave */
+    transition: transform 0.5s ease;
+    /* Transição suave */
 }
 
 /* Aumente o tamanho das fotos no carrossel */
@@ -221,7 +227,8 @@ button:hover strong:after {
     height: auto;
     opacity: 0;
     transition: opacity 0.5s ease;
-    max-height: 1600px; /* Ajuste a altura máxima conforme necessário */
+    max-height: 1600px;
+    /* Ajuste a altura máxima conforme necessário */
 }
 
 .carousel-slide.active {
@@ -240,7 +247,8 @@ button:hover strong:after {
 .carousel img {
     width: 100%;
     height: auto;
-    transition: transform 0.5s ease; /* Transição suave */
+    transition: transform 0.5s ease;
+    /* Transição suave */
 }
 
 .carousel-controls {
@@ -255,7 +263,8 @@ button:hover strong:after {
     cursor: pointer;
     font-size: 24px;
     color: #FF0000;
-    transition: color 0.3s ease; /* Efeito de cor suave */
+    transition: color 0.3s ease;
+    /* Efeito de cor suave */
 }
 
 .carousel-btn:focus {
@@ -263,7 +272,8 @@ button:hover strong:after {
 }
 
 .carousel-btn:hover {
-    color: #FF5555; /* Cor diferente ao passar o mouse */
+    color: #FF5555;
+    /* Cor diferente ao passar o mouse */
 }
 
 
@@ -273,7 +283,7 @@ button:hover strong:after {
 
 
 
-.center{
+.center {
     text-align: center;
 }
 
@@ -306,7 +316,7 @@ button:hover strong:after {
     margin-bottom: 20px;
 }
 
-.row h3{
+.row h3 {
     color: #fff;
     font-size: 1.25rem;
     font-weight: 500;
@@ -342,7 +352,7 @@ button:hover strong:after {
 .cta h2 {
     color: #fff;
     font-size: 4rem;
-    font-weight:300;
+    font-weight: 300;
     margin-bottom: 40px;
 }
 
@@ -399,17 +409,18 @@ button:hover strong:after {
 /* Estilização do Footer */
 .footer {
     background: #0b0b13; /* Cor de fundo do footer */
-    padding: 30px; /* Espaçamento interno do footer */
+    padding: 20px; /* Espaçamento interno do footer */
     text-align: center; /* Centraliza o conteúdo */
 }
 
 .footer-content {
     display: flex; /* Exibe os elementos em uma linha */
-    justify-content: space-between; /* Espaçamento entre os elementos */
+    justify-content:center; /* Espaçamento entre os elementos */
     align-items: center; /* Centraliza os elementos verticalmente */
 }
 
 .footer-section {
+    display: grid;
     flex: 1; /* Distribui o espaço igualmente entre os elementos */
     position: relative; /* Permite adicionar ícones relativos */
 }
@@ -423,54 +434,36 @@ button:hover strong:after {
     color: #ffffffcc; /* Cor do texto */
 }
 
-.footer-section::before {
-    font-family: FontAwesome; /* Fonte de ícones (por exemplo, Font Awesome) */
-    font-size: 24px; /* Tamanho do ícone */
-    position: absolute; /* Posiciona o ícone absolutamente */
-    left: -30px; /* Espaço à esquerda do ícone */
-    top: 50%; /* Centraliza verticalmente o ícone */
-    transform: translateY(-50%); /* Ajusta a posição vertical do ícone */
-    color: #fff; /* Cor do ícone */
-}
-
 .navigation {
     text-align: left; /* Alinha o texto da navegação à esquerda */
 }
 
 .contact {
+    flex: 1; /* Ocupa o espaço disponível */
     text-align: center; /* Centraliza o texto de contato */
+    margin-left: -1000px; /* Adiciona margem à esquerda para controlar a distância do logo */
 }
 
-.footer-section-navigation {
-    display: flex;
-    flex-direction: column; /* Define a direção como vertical */
+.footer-section img {
+    max-width: 120px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
 }
-
-.footer-section-navigation a {
-    color: #ffffffcc; /* Cor do texto */
-    font-size: 1rem;
-    padding: 10px 20px;
-    font-weight: 500;
-    text-align: left; /* Alinha o texto à esquerda dentro do elemento "a" */
-    transition: 0.1s; /* Adiciona uma transição suave */
-}
-.footer-section-navigation a:hover {
-    color: var(--main-color);
-    transition: .1s;
-}
-
-
 
 .redes {
     text-align: right; /* Alinha o texto das redes à direita */
 }
 
 
+
 /* Adicione mais estilos de ícone conforme necessário */
 
 .redes a {
-    margin: 10px 10px 10px 0px; /* Reduz o espaçamento horizontal entre os ícones */
-    display: inline-block; /* Exibe os ícones um ao lado do outro */
+    margin: 10px 10px 10px 0px;
+    /* Reduz o espaçamento horizontal entre os ícones */
+    display: inline-block;
+    /* Exibe os ícones um ao lado do outro */
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -495,19 +488,23 @@ button:hover strong:after {
 
 
 .ethics {
-    text-align: center; /* Centraliza o conteúdo horizontalmente */
-    padding-bottom: 30px; /* Adiciona espaço abaixo do texto */
-    margin-bottom: 30px; /* Adiciona uma margem inferior para distância do footer */
+    text-align: center;
+    /* Centraliza o conteúdo horizontalmente */
+    padding-bottom: 30px;
+    /* Adiciona espaço abaixo do texto */
+    margin-bottom: 30px;
+    /* Adiciona uma margem inferior para distância do footer */
 }
 
 .ethics button {
-    margin-top: 20px; /* Espaço entre o texto e o botão */
+    margin-top: 20px;
+    /* Espaço entre o texto e o botão */
 }
 
 
 
 
-@media (max-width: 1430px){
+@media (max-width: 1430px) {
     header {
         padding: 25px 3%;
     }
@@ -515,10 +512,11 @@ button:hover strong:after {
     section {
         padding: 50px 3%;
     }
+
     h1 {
         font-size: 3rem;
     }
-    
+
     h3 {
         font-size: 3rem;
     }
@@ -536,6 +534,7 @@ button:hover strong:after {
     h1 {
         font-size: 3rem;
     }
+
     h3 {
         font-size: 3rem;
     }
@@ -547,14 +546,14 @@ button:hover strong:after {
     p {
         font-size: 0.9rem;
     }
-     
+
 }
 
 @media (max-width: 830px) {
-     header {
+    header {
         padding: 18px 3%;
     }
-    
+
     #menu-icon {
         display: block;
     }
@@ -577,12 +576,12 @@ button:hover strong:after {
         padding: 1rem;
         border-left: 2px solid #ffffffcc;
         margin: 1rem;
-        background: 
+        background:
     }
 
-   .navbar.active{
-    top: 10%;
-   }
+    .navbar.active {
+        top: 10%;
+    }
 
 }
 
@@ -614,16 +613,17 @@ button:hover strong:after {
 
     .about-text h2 {
         max-width: 100%;
-        font-size : 1.1rem;
+        font-size: 1.1rem;
     }
 
     .about-text p {
         max-width: 100%;
-        font-size: 0.8rem ; 
+        font-size: 0.8rem;
     }
 
     .about-img {
         order: 2;
         max-width: 100%;
         height: auto;
+    }
 }
