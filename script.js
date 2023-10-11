@@ -53,3 +53,53 @@ function autoAdvance() {
 }
 
 autoAdvance(); // Iniciar a auto-avanço
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const body = document.body;
+    const toggleThemeButton = document.getElementById("toggle-theme");
+
+    // Verifique o localStorage para obter a preferência de tema do usuário
+    const currentTheme = localStorage.getItem("theme");
+    if (currentTheme) {
+        body.classList.add(currentTheme);
+        // Atualize o ícone com base no tema atual
+        updateThemeIcon(currentTheme);
+    } else {
+        // Use o estilo do CSS para definir o tema padrão
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            body.classList.add("dark-mode");
+            // Atualize o ícone
+            updateThemeIcon("dark-mode");
+        }
+    }
+
+    // Função para alternar entre os temas
+    function toggleTheme() {
+        if (body.classList.contains("dark-mode")) {
+            body.classList.remove("dark-mode");
+            body.classList.add("light-mode");
+            localStorage.setItem("theme", "light-mode");
+            updateThemeIcon("light-mode");
+        } else {
+            body.classList.remove("light-mode");
+            body.classList.add("dark-mode");
+            localStorage.setItem("theme", "dark-mode");
+            updateThemeIcon("dark-mode");
+        }
+    }
+
+    // Função para atualizar o ícone com base no tema atual
+    function updateThemeIcon(theme) {
+        const themeIcon = document.getElementById("toggle-theme");
+        if (theme === "dark-mode") {
+            themeIcon.classList.remove("bx-moon");
+            themeIcon.classList.add("bx-sun");
+        } else {
+            themeIcon.classList.remove("bx-sun");
+            themeIcon.classList.add("bx-moon");
+        }
+    }
+
+    toggleThemeButton.addEventListener("click", toggleTheme);
+});

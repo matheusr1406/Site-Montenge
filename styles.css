@@ -22,10 +22,29 @@
     --h2-font: 1.9rem;
     --p-font: 1rem;
 }
+#toggle-theme {
+    cursor: pointer;
+}
 
 body {
     background: var(--bg-color);
     color: var(--text-color);
+}
+
+body.light-mode {
+    --bg-color: #ffffff;
+    --main-color: #FF0000;
+    --text-color: #000000;
+    --2nd-main-color:var(--bg-color);
+}
+
+
+
+/* Estilos para o modo escuro */
+body.dark-mode {
+    --bg-color: #000000;
+    --main-color: #FF0000;
+    --text-color: #ffffff;
 }
 
 header {
@@ -411,6 +430,7 @@ button:hover strong:after {
     background: #0b0b13; /* Cor de fundo do footer */
     padding: 20px; /* Espaçamento interno do footer */
     text-align: center; /* Centraliza o conteúdo */
+    margin-top: 180px;
 }
 
 .footer-content {
@@ -500,6 +520,10 @@ button:hover strong:after {
     margin-top: 20px;
     /* Espaço entre o texto e o botão */
 }
+
+
+
+
 
 
 
