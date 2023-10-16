@@ -31,12 +31,39 @@ body {
     color: var(--text-color);
 }
 
+/* Estilos para o modo claro */
 body.light-mode {
-    --bg-color: #ffffff;
+    --bg-color: #F6F6F6;
     --main-color: #FF0000;
-    --text-color: #000000;
-    --2nd-main-color:var(--bg-color);
+    --text-color: #000000; /* Cor do texto no modo claro (preto) */
 }
+
+/* Estilize os elementos específicos que você deseja que o texto mude para uma cor escura no modo claro */
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode h4,
+body.light-mode h5,
+body.light-mode h6,
+body.light-mode p,
+body.light-mode a {
+    color: #000000 !important; /* Cor do texto nos elementos específicos no modo claro (preto) */
+}
+body.light-mode .row {
+    background: #A90003; /* Cor de fundo dos cards no modo claro */
+    color: #000000; /* Cor do texto nos cards no modo claro (preto) */
+}
+body.light-mode .footer {
+    background: #A90003; /* Cor de fundo do footer no modo claro */
+    color: #000000; /* Cor do texto no footer no modo claro (preto) */
+}
+
+.light-mode .resume .box {
+    background-color: #A90003; /* Cor de fundo da caixa no modo claro */
+     /* Cor do texto na caixa no modo claro */
+    /* Outros estilos no modo claro */
+}
+
 
 
 
