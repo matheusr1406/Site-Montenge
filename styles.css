@@ -10,7 +10,7 @@
 }
 
 :root {
-    --bg-color: #000;
+    --bg-color: #1F1C1C;
     /* Cor de fundo preta */
     --main-color: #FF0000;
     /* Vermelho principal */
@@ -35,7 +35,7 @@ body {
 body.light-mode {
     --bg-color: #F6F6F6;
     --main-color: #FF0000;
-    --text-color: #000000; /* Cor do texto no modo claro (preto) */
+    --text-color: #1F1C1C; /* Cor do texto no modo claro (preto) */
 }
 
 /* Estilize os elementos específicos que você deseja que o texto mude para uma cor escura no modo claro */
