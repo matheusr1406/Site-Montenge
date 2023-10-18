@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações Adicionais</title>
+    <link rel="stylesheet" href="stylesInfo.css"> <!-- Link para o seu arquivo de estilos -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <div class="info-page">
+        <div class="title-container">
+            <h1>Informações Adicionais</h1>
+        </div>
+        <i id="toggle-theme" class='bx bx-sun'></i>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus perspiciatis labore non ea, aperiam repellendus, eaque facere cupiditate maxime ratione quaerat earum corporis est suscipit. Voluptatem maiores veniam ducimus blanditiis?</p>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const body = document.body;
+            const toggleThemeButton = document.getElementById("toggle-theme");
+
+            // Verifique o localStorage para obter a preferência de tema do usuário
+            const currentTheme = localStorage.getItem("theme");
+            if (currentTheme) {
+                body.classList.add(currentTheme);
+                // Atualize o ícone com base no tema atual
+                updateThemeIcon(currentTheme);
+            } else {
+                // Use o estilo do CSS para definir o tema padrão
+                if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                    body.classList.add("dark-mode");
+                    // Atualize o ícone
+                    updateThemeIcon("dark-mode");
+                }
+            }
+
+            // Função para alternar entre os temas
+            function toggleTheme() {
+                if (body.classList.contains("dark-mode")) {
+                    body.classList.remove("dark-mode");
+                    body.classList.add("light-mode");
+                    localStorage.setItem("theme", "light-mode");
+                    updateThemeIcon("light-mode");
+                } else {
+                    body.classList.remove("light-mode");
+                    body.classList.add("dark-mode");
+                    localStorage.setItem("theme", "dark-mode");
+                    updateThemeIcon("dark-mode");
+                }
+            }
+
+            // Função para atualizar o ícone com base no tema atual
+            function updateThemeIcon(theme) {
+                const themeIcon = document.getElementById("toggle-theme");
+                if (theme === "dark-mode") {
+                    themeIcon.classList.remove("bx-moon");
+                    themeIcon.classList.add("bx-sun");
+                } else {
+                    themeIcon.classList.remove("bx-sun");
+                    themeIcon.classList.add("bx-moon");
+                }
+            }
+            toggleThemeButton.addEventListener("click", toggleTheme);
+        });
+    </script>
+</body>
+</html>
