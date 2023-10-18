@@ -1,0 +1,113 @@
+.toggle-theme {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* Defina o estilo dos ícones de alternância de modo */
+.toggle-theme i {
+    font-size: 28px;
+    color: var(--main-color);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+}
+
+:root {
+    --bg-color: #1F1C1C;
+    --main-color: #FF0000;
+    --2nd-main-color: #FFFFFF;
+    --text-color: #FFFFFF;
+    --big-font: 5rem;
+    --h2-font: 1.9rem;
+    --p-font: 1rem;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+
+/* Estilos para o modo claro */
+body.light-mode {
+    --bg-color: #F6F6F6;
+    --main-color: #FF0000;
+    --text-color: #1F1C1C; /* Cor do texto no modo claro (preto) */
+}
+
+/* Estilize os elementos específicos que você deseja que o texto mude para uma cor escura no modo claro */
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode h4,
+body.light-mode h5,
+body.light-mode h6,
+body.light-mode p,
+body.light-mode a {
+    color: #000000 !important; /* Cor do texto nos elementos específicos no modo claro (preto) */
+}
+body.light-mode .row {
+    background: #A90003; /* Cor de fundo dos cards no modo claro */
+    color: #000000; /* Cor do texto nos cards no modo claro (preto) */
+}
+body.light-mode .footer {
+    background: #A90003; /* Cor de fundo do footer no modo claro */
+    color: #000000; /* Cor do texto no footer no modo claro (preto) */
+}
+
+.light-mode .resume .box {
+    background-color: #A90003; /* Cor de fundo da caixa no modo claro */
+     /* Cor do texto na caixa no modo claro */
+    /* Outros estilos no modo claro */
+}
+
+
+
+
+/* Estilos para o modo escuro */
+body.dark-mode {
+    --bg-color: #000000;
+    --main-color: #FF0000;
+    --text-color: #ffffff;
+}
+
+/* Adicione estilos específicos para esta página de informações adicionais */
+.info-page {
+    padding: 100px 14%;
+    text-align: center;
+}
+
+.info-page h1 {
+    font-size: 3rem;
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+
+.info-page p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 30px;
+}
+
+/* Outros estilos CSS existentes aqui */
+
+/* Defina o estilo dos ícones de alternância de modo */
+#toggle-theme {
+    cursor: pointer;
+    font-size: 28px;
+    float: right; /* Alinha o ícone à direita do h1 */
+}
+
+
+
