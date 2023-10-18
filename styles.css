@@ -52,6 +52,7 @@ body.light-mode a {
     color: #000000 !important;
     /* Cor do texto nos elementos específicos no modo claro (preto) */
 }
+
 body.light-mode header {
     background: #F0F0F0;
 }
@@ -361,68 +362,80 @@ button:hover strong:after {
     grid-gap: 2rem;
     align-items: center;
     margin-top: 4.4rem;
+    margin-left: 80px;
 }
 
-.row {
-    background: #0b0b13;
-    padding: 60px 35px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all .40s;
-}
-
-.row i {
-    color: #FF0000;
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-.row h3 {
-    color: #fff;
-    font-size: 1.25rem;
-    font-weight: 500;
-    margin-bottom: 20px;
-}
-
-.row p {
-    font-size: 18px;
-    color: #ffffffcc;
-    line-height: 30px;
-}
-
-.row:hover {
-    transform: translateY(-15px);
-    box-shadow: 0px 15px 30px 0px rgb(0 0 0 / 70%);
-}
-
-.cta {
-    background: #0b0b13;
+.card {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    background-color: #dcdcdc;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 0 5px #ffffff80;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .card svg {
+    width: 120px;
+    fill: #333;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+  }
+  
+  .card__content {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding: 150px 0;
-    text-align: center;
-    margin: 100px auto;
-}
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f2f2f2;
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .card:hover .card__content {
+    transform: rotateX(0deg);
+  }
+  
+  .card__title {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+    font-weight: 700;
+  }
+  
+  .card:hover svg {
+    scale: 0;
+  }
+  
+  .card__description {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: #777;
+    line-height: 1.4;
+  }
 
-.cta h4 {
-    color: #fff;
-    font-size: 1.6rem;
-    font-weight: 300;
-    margin-bottom: 30px;
-}
-
-.cta h2 {
-    color: #fff;
-    font-size: 4rem;
-    font-weight: 300;
-    margin-bottom: 40px;
-}
 
 .resume-content {
     display: flex;
     align-items: center;
     margin-top: 4.4rem;
-    flex-wrap: wrap; /* Permite que os logos quebrem para a próxima linha em telas menores */
-    justify-content: space-between; /* Distribui os logos uniformemente ao longo da linha */
+    flex-wrap: wrap;
+    /* Permite que os logos quebrem para a próxima linha em telas menores */
+    justify-content: space-between;
+    /* Distribui os logos uniformemente ao longo da linha */
 }
 
 .resume-content .box {
@@ -434,7 +447,8 @@ button:hover strong:after {
 .resume-content img {
     width: 120px;
     height: auto;
-    margin-bottom: 20px; /* Adicione margem inferior para separar as linhas de logos */
+    margin-bottom: 20px;
+    /* Adicione margem inferior para separar as linhas de logos */
     cursor: pointer;
     transition: transform 0.3s;
     border-radius: 50%;
@@ -443,6 +457,7 @@ button:hover strong:after {
 .resume-content img:hover {
     transform: scale(1.1);
 }
+
 
 
 
@@ -570,6 +585,9 @@ button:hover strong:after {
 
 
 
+
+
+
 @media (max-width: 1430px) {
     header {
         padding: 25px 3%;
@@ -621,7 +639,8 @@ button:hover strong:after {
     }
 
     #menu-icon {
-        display: block; /* Mostrar o botão apenas nas telas menores */
+        display: block;
+        /* Mostrar o botão apenas nas telas menores */
     }
 
 
@@ -654,7 +673,8 @@ button:hover strong:after {
 
 @media (min-width: 831px) {
     #menu-icon {
-        display: none; /* Ocultar o botão nas telas maiores */
+        display: none;
+        /* Ocultar o botão nas telas maiores */
     }
 }
 
@@ -662,10 +682,13 @@ button:hover strong:after {
 
 @media (max-width: 768px) {
     .resume-content img {
-        width: 120px; /* Define a largura fixa para os logos em telas menores */
-        margin-bottom: 20px; /* Adicione margem inferior para separar os logos */
+        width: 120px;
+        /* Define a largura fixa para os logos em telas menores */
+        margin-bottom: 20px;
+        /* Adicione margem inferior para separar os logos */
         flex-direction: column;
     }
+
     .home {
         grid-template-columns: 1fr;
         grid-gap: 2rem;
@@ -673,8 +696,10 @@ button:hover strong:after {
         margin-top: 350px;
         height: 100vh;
     }
+
     #menu-icon {
-        display: block; /* Mostrar o botão apenas nas telas menores */
+        display: block;
+        /* Mostrar o botão apenas nas telas menores */
     }
 
     .home-text p {
@@ -733,4 +758,3 @@ button:hover strong:after {
 
     }
 }
-
