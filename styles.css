@@ -10,7 +10,7 @@
 }
 
 :root {
-    --bg-color: #1F1C1C;
+    --bg-color: #1C0909;
     /* Cor de fundo preta */
     --main-color: #FF0000;
     /* Vermelho principal */
@@ -34,7 +34,7 @@ body {
 
 /* Estilos para o modo claro */
 body.light-mode {
-    --bg-color: #F6F6F6;
+    --bg-color: #FAF3F3;
     --main-color: #FF0000;
     --text-color: #1F1C1C;
     /* Cor do texto no modo claro (preto) */
@@ -51,6 +51,9 @@ body.light-mode p,
 body.light-mode a {
     color: #000000 !important;
     /* Cor do texto nos elementos específicos no modo claro (preto) */
+}
+body.light-mode header {
+    background: #F0F0F0;
 }
 
 body.light-mode .row {
@@ -415,54 +418,37 @@ button:hover strong:after {
 }
 
 .resume-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
-    grid-gap: 3rem;
+    display: flex;
     align-items: center;
     margin-top: 4.4rem;
+    flex-wrap: wrap; /* Permite que os logos quebrem para a próxima linha em telas menores */
+    justify-content: space-between; /* Distribui os logos uniformemente ao longo da linha */
 }
 
-.box {
-    background: #0b0b13;
-    padding: 40px 30px;
-    border-radius: 5px;
+.resume-content .box {
+    background: none;
+    padding: 0;
     cursor: pointer;
-    transition: all .40s;
 }
 
-.box h6 {
-    color: #3e4455;
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 10px;
+.resume-content img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 20px; /* Adicione margem inferior para separar as linhas de logos */
+    cursor: pointer;
+    transition: transform 0.3s;
+    border-radius: 50%;
 }
 
-.box h4 {
-    color: #fff;
-    font-size: 1.3rem;
-    font-weight: 700;
-    margin-top: 25px;
-    margin-bottom: 13px;
+.resume-content img:hover {
+    transform: scale(1.1);
 }
 
-.box p {
-    font-size: 1rem;
-    font-weight: 300;
-    margin-bottom: 1.2rem;
-    line-height: 1.8rem;
-    color: #ffffffcc;
-}
 
-.box h5 {
-    font-size: 14px;
-    font-weight: 500;
-    color: #ffffffcc;
-}
 
-.box:hover {
-    transform: translateY(-15px);
-    box-shadow: 0px 15px 30px 0px rgb(0 0 0 / 70%);
-}
+
+/* O restante do CSS permanece igual se houver outros estilos específicos que você deseja aplicar. */
+
 
 /* Estilização do Footer */
 .footer {
@@ -675,6 +661,11 @@ button:hover strong:after {
 
 
 @media (max-width: 768px) {
+    .resume-content img {
+        width: 120px; /* Define a largura fixa para os logos em telas menores */
+        margin-bottom: 20px; /* Adicione margem inferior para separar os logos */
+        flex-direction: column;
+    }
     .home {
         grid-template-columns: 1fr;
         grid-gap: 2rem;
@@ -742,3 +733,4 @@ button:hover strong:after {
 
     }
 }
+
