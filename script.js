@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function() {
             themeIcon.classList.add("bx-moon");
         }
     }
-
     toggleThemeButton.addEventListener("click", toggleTheme);
 });
+
 
