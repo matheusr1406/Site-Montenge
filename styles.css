@@ -648,10 +648,11 @@ button:hover strong:after {
         left: 0;
         right: 0;
         flex-direction: column;
-        background: #0b0b13;
+        background: #FAF3F3;
         box-shadow: 0px 15px 30x 0px rgb(0 0 0 / 70%);
         text-align: left;
         transition: 0.2s ease;
+        color: #1F1C1C;
     }
 
     .navbar a {
@@ -665,6 +666,20 @@ button:hover strong:after {
     .navbar.active {
         top: 10%;
         display: flex;
+    }
+
+    .service-content {
+        display: flex;
+        flex-wrap: wrap; /* Permite a quebra dos serviços para a próxima linha */
+        justify-content: space-between; /* Distribui uniformemente os serviços nas linhas */
+        margin-top: 4.4rem;
+        margin-left: 80px;
+    }
+    
+    .card {
+        width: 100%; /* Ocupa a largura total do contêiner pai */
+        margin-bottom: 20px; /* Espaço entre os serviços */
+        /* Outros estilos específicos dos cards */
     }
 
 }
