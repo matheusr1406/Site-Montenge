@@ -10,14 +10,12 @@
 }
 
 :root {
-    --bg-color: #1C0909;
-    /* Cor de fundo preta */
+    --bg-color: #FAF3F3;
+    /* Cor de fundo branca no light mode */
     --main-color: #FF0000;
     /* Vermelho principal */
-    --2nd-main-color: #FFFFFF;
-    /* Branco */
-    --text-color: #FFFFFF;
-    /* Cor do texto branca */
+    --text-color: #1F1C1C;
+    /* Cor do texto no light mode (preto) */
     --big-font: 5rem;
     --h2-font: 1.9rem;
     --p-font: 1rem;
