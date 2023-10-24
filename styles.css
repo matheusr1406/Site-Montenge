@@ -376,20 +376,20 @@ button:hover strong:after {
     perspective: 1000px;
     box-shadow: 0 0 0 5px #ffffff80;
     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
-  
-  .card svg {
+}
+
+.card svg {
     width: 128px;
     fill: #333;
     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
-  
-  .card:hover {
+}
+
+.card:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
-  }
-  
-  .card__content {
+}
+
+.card__content {
     position: absolute;
     top: 0;
     left: 0;
@@ -401,29 +401,31 @@ button:hover strong:after {
     transform: rotateX(-90deg);
     transform-origin: bottom;
     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
-  
-  .card:hover .card__content {
+    pointer-events: none;
+}
+
+.card:hover .card__content {
     transform: rotateX(0deg);
-  }
-  
-  .card__title {
+    pointer-events: none;
+}
+
+.card__title {
     margin: 0;
     font-size: 24px;
     color: #333;
     font-weight: 700;
-  }
-  
-  .card:hover svg {
+}
+
+.card:hover svg {
     scale: 0;
-  }
-  
-  .card__description {
+}
+
+.card__description {
     margin: 10px 0 0;
     font-size: 14px;
     color: #777;
     line-height: 1.4;
-  }
+}
 
 
 .resume-content {
@@ -633,10 +635,13 @@ button:hover strong:after {
         left: 0;
         right: 0;
         flex-direction: column;
-        background: #FAF3F3;
-        box-shadow: 0px 15px 30x 0px rgb(0 0 0 / 70%);
+        background: #ECECEC;
+        /* Cor de fundo mais clara */
+        box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.7);
+        /* Sutil alteração na sombra */
         text-align: left;
-        transition: 0.2s ease;
+        transition: top 0.5s ease;
+        /* Animar o topo de forma mais suave */
         color: #1F1C1C;
     }
 
@@ -645,25 +650,55 @@ button:hover strong:after {
         padding: 1rem;
         border-left: 2px solid #ffffffcc;
         margin: 1rem;
-        background:
     }
+
 
     .navbar.active {
         top: 10%;
         display: flex;
+        transition: top 0.5s ease;
+        /* Animar o topo de forma mais suave */
     }
+
+    /* Estilos para o modo claro */
+    body.light-mode .navbar {
+        background: #ECECEC;
+        /* Cor de fundo mais clara no modo claro */
+        box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.7);
+        /* Sombra no modo claro */
+        color: #1F1C1C;
+        /* Cor do texto no modo claro */
+    }
+
+    /* Estilos para o modo escuro */
+    body.dark-mode .navbar {
+        background: #1C0909;
+        /* Cor de fundo mais escura no modo escuro */
+        box-shadow: 0px 15px 30px 0px rgba(255, 255, 255, 0.7);
+        /* Sombra no modo escuro */
+        color: #FFFFFF;
+        /* Cor do texto no modo escuro */
+    }
+
+
 
     .service-content {
         display: flex;
-        flex-wrap: wrap; /* Permite a quebra dos serviços para a próxima linha */
-        justify-content: space-between; /* Distribui uniformemente os serviços nas linhas */
+        flex-wrap: wrap;
+        justify-content: center;
+        /* Centraliza os cards horizontalmente */
+        align-items: center;
+        /* Centraliza os cards verticalmente */
         margin-top: 4.4rem;
-        margin-left: 80px;
+        margin-left: 0;
+        /* Defina a margem esquerda para 0 para centralizar na tela */
     }
-    
+
     .card {
-        width: 100%; /* Ocupa a largura total do contêiner pai */
-        margin-bottom: 20px; /* Espaço entre os serviços */
+        width: 100%;
+        /* Ocupa a largura total da tela */
+        margin: 1rem;
+        /* Adiciona espaço entre os cards */
         /* Outros estilos específicos dos cards */
     }
 
@@ -753,7 +788,5 @@ button:hover strong:after {
         text-align: center;
         margin-left: 0;
         /* Remove a margem à esquerda para alinhar ao centro */
-
     }
 }
-
